@@ -26,7 +26,6 @@ ENV PATH $NVM_DIR/versions/node/v$NODE_VERSION/bin:$PATH
 
 RUN npm install truffle -g
 
-ADD ./truffle-app /home/truffle-app
 ADD ./shell.sh /home/
 
 WORKDIR /home/truffle-app

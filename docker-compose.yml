@@ -11,7 +11,7 @@ services:
     networks:
       - backend
     volumes:
-      - ./truffle/truffle-app:/home/truffle-app
+      - ./truffle-app:/home/truffle-app
 networks:
   backend:
     driver: bridge
