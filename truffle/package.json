@@ -9,16 +9,18 @@
   "scripts": {
     "test": "truffle test",
     "start": "npm run compile && npm run migrate",
-    "watch": "npm install && gulp watch",
-    "migrate": "truffle migrate --reset",
-    "compile": "truffle compile",
-    "console": "truffle console"
+    "watch": "npm install && npm run clean && gulp watch",
+    "migrate": "truffle migrate --reset >> ./logs/truffle-migrate.log",
+    "compile": "truffle compile >> ./logs/truffle-compile.log",
+    "console": "truffle console",
+    "clean": "rimraf ./build"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-shell": "^0.6.5",
+    "rimraf": "^2.6.2",
     "truffle": "^4.1.3"
   }
 }
