@@ -9,7 +9,7 @@
   "scripts": {
     "test": "truffle test",
     "start": "npm run compile && npm run migrate",
-    "watch": "gulp watch",
+    "watch": "npm install && gulp watch",
     "migrate": "truffle migrate --reset",
     "compile": "truffle compile",
     "console": "truffle console"
