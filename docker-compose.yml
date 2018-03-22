@@ -5,13 +5,17 @@ services:
     image: trufflesuite/ganache-cli
     networks:
       - backend
+    ports:
+      - "8545:8545"
   truffle:
     container_name: truffle
     build: ./truffle
     networks:
       - backend
     volumes:
-      - ./truffle-app:/home/truffle-app
+      - ./truffle:/home/truffle-app
+    depends_on:
+      - ganache
 networks:
   backend:
     driver: bridge

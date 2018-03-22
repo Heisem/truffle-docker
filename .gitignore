@@ -1,1 +1,2 @@
-truffle-app
+truffle/node_modules
+truffle/build
