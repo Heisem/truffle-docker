@@ -1,4 +1,4 @@
-version: "3"
+version: "3.5"
 services:
   ganache:
     container_name: ganache
@@ -9,13 +9,14 @@ services:
       - "8545:8545"
   truffle:
     container_name: truffle
-    build: ./truffle
+    build: ./
     networks:
       - backend
     volumes:
-      - ./truffle:/home/truffle-app
+      - ./:/home/truffle-app
     depends_on:
       - ganache
 networks:
   backend:
+    name: blockchain_network
     driver: bridge
